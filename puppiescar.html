@@ -59,22 +59,26 @@
 <script>
 <script type="module">
   // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyB804BmxINjhT786JwbVL_zSrAdYwzhJtM",
-    authDomain: "pupitaxi-5e99d.firebaseapp.com",
-    projectId: "pupitaxi-5e99d",
-    storageBucket: "pupitaxi-5e99d.appspot.com",
-    messagingSenderId: "1082842219401",
-    appId: "1:1082842219401:web:336969eb1c931251ad1758"
-  };
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBjL1W4mVAOwVccMDBMDXflvKCnGhbim3Q",
+  authDomain: "mascotas-5062d.firebaseapp.com",
+  projectId: "mascotas-5062d",
+  storageBucket: "mascotas-5062d.appspot.com",
+  messagingSenderId: "370655291366",
+  appId: "1:370655291366:web:8e56e1487d1cc6a00cd827",
+  measurementId: "G-G21JK0L8VW"
+};
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 </script>
     <!-- banner section start -->
     <div class="banner_section">
@@ -258,7 +262,7 @@
 			});
 		}
 		</script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByrAUNRMrBwcIjow1msj9EO3w1v0bKZKI&libraries=places&callback=initAutocomplete" async defer></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjL1W4mVAOwVccMDBMDXflvKCnGhbim3Q&libraries=places&callback=initAutocomplete" async defer></script>
     <!-- banner section end -->
     <!-- our taxis section start -->
     <div id="taxis" class="taxis_section layout_padding">
@@ -316,7 +320,7 @@
 
   <div class="copyright_section">
     <div class="container">
-      <p class="copyright">2022 en colaboracion con <a href="https://mascotascoquetas.com/">Mascotas Coquetas</a></p>
+      <p class="copyright">2024 en colaboracion con <a href="https://mascotascoquetas.com/">Mascotas Coquetas</a></p>
     </div>
   </div>
 
