@@ -58,24 +58,28 @@
 
 <script>
 <script type="module">
-// Import the functions you need from the SDKs you need
+  // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyC-L5vGpnAzhAmbyHhutDjWd_bb3pGeId8",
   authDomain: "puppies-car.firebaseapp.com",
+  databaseURL: "https://puppies-car-default-rtdb.firebaseio.com",
   projectId: "puppies-car",
   storageBucket: "puppies-car.appspot.com",
   messagingSenderId: "441067918907",
-  appId: "1:441067918907:web:9fb97546c244281b66ee1e"
+  appId: "1:441067918907:web:9fb97546c244281b66ee1e",
+  measurementId: "G-VD786YRYRH"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
+const analytics = getAnalytics(app);
 </script>
     <!-- banner section start -->
     <div class="banner_section">
@@ -102,19 +106,19 @@ const app = initializeApp(firebaseConfig);
                 
                 <div class="form-group">
 						<b><label for="from-input">Recoger en:</label></b>
-                  <input type="search" class="form-control" id="Recoger" placeholder="Donde nos vemos">
+                  <input type="search" class="form-control" id="from-input" placeholder="Donde nos vemos">
                 </div>
                 <div class="form-group">
 						<b><label for="to-input">Dejar en:</label></b>
-                  <input type="search" class="form-control" id="Dejar" placeholder="A donde vamos">
+                  <input type="search" class="form-control" id="to-input" placeholder="A donde vamos">
                 </div>
                 <div class="form-group">
 						<b><label for="to-input">Cuando </label></b>
-                  <input type="search" class="form-control" id="Cuando" placeholder="Hoy 8:30pm">
+                  <input type="search" class="form-control" id="cuando" placeholder="Hoy 8:30pm">
                 </div>
                 <div class="form-group">
 						<b><label for="to-input">Telefono </label></b>
-                  <input type="search" class="form-control" id="Telefono" placeholder="777-163-9437">
+                  <input type="search" class="form-control" id="telefono" placeholder="777-163-9437">
                 </div>
 
                   </form>
@@ -126,11 +130,11 @@ const app = initializeApp(firebaseConfig);
 				<div id="form" class="form-horizontal col-sm-4">
 					<div class="form-group">
 						<b><label for="to-input">Distancia</label></b>
-						<label id="Distancia" class="form-text">Presiona en RESERVAR para calcular...</label>
+						<label id="value-distance" class="form-text">Presiona en RESERVAR para calcular...</label>
 					</div>
 					<div class="form-group">
 						<b><label for="to-input">Precio Total</label></b>
-						<label id="Precio" class="form-text">Presiona en RESERVAR para calcular...</label>
+						<label id="value-price" class="form-text">Presiona en RESERVAR para calcular...</label>
 					</div>
 				</div>
 
@@ -261,7 +265,6 @@ const app = initializeApp(firebaseConfig);
 		</script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhH7Ob11PPpLHEJ_N7xZsl0b-B6ugl_vo&libraries=places&callback=initAutocomplete" async defer></script>
     <!-- banner section end -->
-	
     <!-- our taxis section start -->
     <div id="taxis" class="taxis_section layout_padding">
       <div class="container">
@@ -318,7 +321,7 @@ const app = initializeApp(firebaseConfig);
 
   <div class="copyright_section">
     <div class="container">
-      <p class="copyright">2024 en colaboracion con <a href="https://www.mascotascoquetas.com/">Mascotas Coquetas</a></p>
+      <p class="copyright">2022 en colaboracion con <a href="https://www.mascotascoquetas.com/">Mascotas Coquetas</a></p>
     </div>
   </div>
 
